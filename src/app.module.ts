@@ -6,6 +6,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { config } from './config/env.config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { MenuModule } from './menu/menu.module';
+import { ConsumerModule } from './consumers/consumers.module';
+
 
 @Module({
   imports: [
@@ -13,13 +15,9 @@ import { MenuModule } from './menu/menu.module';
       isGlobal:true,
       load:[config]
     }),
-    MongooseModule.forRootAsync({
-      inject:[ConfigService],
-      useFactory:(configService:ConfigService)=>({
-        uri:configService.get<string>('mongodb_menu_url'),
-      })
-    }),
-    MenuModule
+    
+    MenuModule,
+    ConsumerModule,
   ],
   controllers: [AppController],
   providers: [AppService],

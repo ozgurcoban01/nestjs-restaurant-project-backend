@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { MenuItemModel } from './menu.model';
 import { InjectModel } from '@nestjs/mongoose';
 import { MenuItemDocument, MenuItem } from './menuItem.schema';
 import { Model } from 'mongoose';
