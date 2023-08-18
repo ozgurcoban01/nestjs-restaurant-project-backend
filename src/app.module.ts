@@ -7,6 +7,7 @@ import { config } from './config/env.config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { MenuModule } from './menu/menu.module';
 import { ConsumerModule } from './consumers/consumers.module';
+import { TableModule } from './tables/tables.module';
 
 
 @Module({
@@ -18,6 +19,7 @@ import { ConsumerModule } from './consumers/consumers.module';
     
     MenuModule,
     ConsumerModule,
+    TableModule
   ],
   controllers: [AppController],
   providers: [AppService],
