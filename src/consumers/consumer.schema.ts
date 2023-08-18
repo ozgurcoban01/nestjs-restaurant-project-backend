@@ -9,8 +9,6 @@ export class Consumer{
     @Prop()
     table_id:string;
 
-    @Prop()
-    order_id:string;
 }
 
 export type ConsumerDocument=HydratedDocument<Consumer>

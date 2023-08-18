@@ -17,7 +17,18 @@ export class MenuService{
         const newMenuItem=new this.menuItem(menuItemInformations)
         return await newMenuItem.save();
     }
+
+    async deleteMenuItem(id){
+        return await this.menuItem.findByIdAndDelete(id)
+    }
     
+    async updateMenuItem(id,menuItemInformations){
+        const updatedMenuItem=await this.menuItem.findById(id)
+        updatedMenuItem.title=menuItemInformations.title
+        updatedMenuItem.price=menuItemInformations.price
+        updatedMenuItem.category=menuItemInformations.category
+        return await updatedMenuItem.save()
+    }
     
 
 }
