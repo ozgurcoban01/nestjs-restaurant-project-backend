@@ -11,6 +11,11 @@ export class TableController{
         return this.tableService.getAllTables();
     }
 
+    @Post('getTable/:id')
+    getTable(@Param('id') id:string){
+        return this.tableService.getTable(id);
+    }
+
     @Post('createTable')
     createTable(@Body() tableName:string){
         return this.tableService.newTable(tableName)
