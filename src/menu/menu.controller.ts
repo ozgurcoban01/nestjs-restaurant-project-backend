@@ -19,7 +19,7 @@ export class MenuController{
 
     @Post('deleteMenuItem/:id')
     deleteMenuItem(@Param('id') id:string){
-        return this.menuService.getAllMenu()
+        return this.menuService.deleteMenuItem(id)
     }
 
     @Post('updateMenuItem/:id')

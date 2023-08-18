@@ -24,9 +24,11 @@ export class MenuService{
     
     async updateMenuItem(id,menuItemInformations){
         const updatedMenuItem=await this.menuItem.findById(id)
+       
         updatedMenuItem.title=menuItemInformations.title
         updatedMenuItem.price=menuItemInformations.price
         updatedMenuItem.category=menuItemInformations.category
+     
         return await updatedMenuItem.save()
     }
     
