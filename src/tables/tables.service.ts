@@ -12,6 +12,10 @@ export class TableService{
         return await this.table.find()
     }
 
+    async getTable(id){
+        return await this.table.findById(id)
+    }
+
     async newTable(newTableInformation){
         const newTable=new this.table(newTableInformation)
         return await newTable.save()
