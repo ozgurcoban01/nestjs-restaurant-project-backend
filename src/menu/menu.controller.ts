@@ -16,4 +16,14 @@ export class MenuController{
     newMenuItem(@Body() menuItemInformations:MenuItemModel){
         return this.menuService.newMenuItem(menuItemInformations)
     }
+
+    @Post('deleteMenuItem/:id')
+    deleteMenuItem(@Param('id') id:string){
+        return this.menuService.getAllMenu()
+    }
+
+    @Post('updateMenuItem/:id')
+    updateMenuItem(@Param('id') id:string,@Body() menuItemInformations:MenuItemModel){
+        return this.menuService.updateMenuItem(id,menuItemInformations)
+    }
 }
