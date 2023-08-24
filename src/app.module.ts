@@ -8,6 +8,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { MenuModule } from './menu/menu.module';
 import { ConsumerModule } from './consumers/consumers.module';
 import { TableModule } from './tables/tables.module';
+import { OrderModule } from './orders/orders.module';
 
 
 @Module({
@@ -19,7 +20,8 @@ import { TableModule } from './tables/tables.module';
     
     MenuModule,
     ConsumerModule,
-    TableModule
+    TableModule,
+    OrderModule
   ],
   controllers: [AppController],
   providers: [AppService],
