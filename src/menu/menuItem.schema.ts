@@ -13,6 +13,9 @@ export class MenuItem{
     
     @Prop()
     category:string;
+
+    @Prop()
+     image_id:string;
 }
 
 export type MenuItemDocument=HydratedDocument<MenuItem>;
