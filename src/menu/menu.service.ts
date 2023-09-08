@@ -3,8 +3,6 @@ import { InjectModel } from '@nestjs/mongoose';
 import { MenuItemDocument, MenuItem } from './menuItem.schema';
 import { Model } from 'mongoose';
 
-
-
 @Injectable()
 export class MenuService{
     constructor(@InjectModel(MenuItem.name) private menuItem:Model<MenuItemDocument>){}

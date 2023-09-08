@@ -21,8 +21,6 @@ export class OrderService{
         return await this.order.findByIdAndDelete(id)
     }   
 
-
-
     async changeOrder(id,orderInformation){
 
         const changeOrder=await this.order.findById(id)

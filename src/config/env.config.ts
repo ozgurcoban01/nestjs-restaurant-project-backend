@@ -4,4 +4,5 @@ export const config=()=>({
      mongodb_consumer_url:process.env.MONGODB_CONSUMER_URL,
      mongodb_table_url:process.env.MONGODB_TABLE_URL,
      mongodb_order_url:process.env.MONGODB_ORDER_URL,
+     mongodb_image_url:process.env.MONGODB_IMAGE_URL,
 })

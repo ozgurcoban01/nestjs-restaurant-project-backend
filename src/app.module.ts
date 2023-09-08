@@ -9,6 +9,7 @@ import { MenuModule } from './menu/menu.module';
 import { ConsumerModule } from './consumers/consumers.module';
 import { TableModule } from './tables/tables.module';
 import { OrderModule } from './orders/orders.module';
+import { MenuImageModule } from './menuImages/menuImages.module';
 
 
 @Module({
@@ -21,7 +22,8 @@ import { OrderModule } from './orders/orders.module';
     MenuModule,
     ConsumerModule,
     TableModule,
-    OrderModule
+    OrderModule,
+    MenuImageModule,
   ],
   controllers: [AppController],
   providers: [AppService],
