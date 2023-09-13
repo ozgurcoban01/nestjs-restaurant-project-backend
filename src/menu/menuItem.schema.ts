@@ -16,6 +16,12 @@ export class MenuItem{
 
     @Prop()
      image_id:string;
+
+     @Prop()
+     selected:boolean;
+ 
+     @Prop()
+      base64:string;
 }
 
 export type MenuItemDocument=HydratedDocument<MenuItem>;
