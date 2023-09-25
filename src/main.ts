@@ -9,6 +9,7 @@ async function bootstrap() {
     'https://restaurant-test-vite.netlify.app/consumer/enterName',
     'https://restaurant-test-vite.netlify.app/kitchen/admin',
     'https://restaurant-test-vite.netlify.app',
+    'http://localhost:5173',
     'http://localhost:5173/kitchen/admin',
     'http://localhost:5173/consumer/scanQr',
     
