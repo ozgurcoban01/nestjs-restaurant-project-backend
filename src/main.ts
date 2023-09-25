@@ -7,8 +7,8 @@ async function bootstrap() {
   const configService=app.get(ConfigService)
   const PORT=configService.get<string>('port')
   app.enableCors({
-    allowedHeaders: '*',
-    origin: '*',
+    allowedHeaders: ['content-type'],
+    origin: 'https://restaurant-test-vite.netlify.app',
     credentials: true,
   });
   await app.listen(PORT);
