@@ -8,10 +8,11 @@ async function bootstrap() {
     'http://https://restaurant-test-vite.netlify.app/consumer/scanQr',
     'http://https://restaurant-test-vite.netlify.app/consumer/enterName',
     'http://https://restaurant-test-vite.netlify.app/kitchen/admin',
+    'http://https://restaurant-test-vite.netlify.app',
     'http://localhost:5173/kitchen/admin',
     'http://localhost:5173/consumer/scanQr',
 
-  ];
+  ];  
   const app = await NestFactory.create(AppModule, {
 
     cors: {
