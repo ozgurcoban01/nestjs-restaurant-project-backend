@@ -13,31 +13,14 @@ async function bootstrap() {
     'http://localhost:5173/consumer/scanQr',
 
   ];  
-  const app = await NestFactory.create(AppModule, {
-
-    cors: {
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS', 'HEAD'],
-      origin: function (origin, callback) {
-        if (!origin) {
-          callback(null, true);
-          return;
-        }
-        if (
-          whitelist.includes(origin) || // Checks your whitelist
-          !!origin.match(/yourdomain\.com$/) // Overall check for your domain
-        ) {
-          console.log('allowed cors for:', origin);
-          callback(null, true);
-        } else {
-          console.log('blocked cors for:', origin);
-          callback(new ImATeapotException('Not allowed by CORS'), false);
-        }
-      },
-    },
-  });
+  const app = await NestFactory.create(AppModule);
   const configService=app.get(ConfigService)
   const PORT=configService.get<string>('port')
-
+  app.enableCors({
+    allowedHeaders: ['content-type'],
+    origin: whitelist,
+    credentials: true,
+  });
 
 
 
