@@ -8,17 +8,17 @@ export class CategoryController{
 
     @Get('getAllCategory')
     getAllMenu(){
-        return this.categoryService.getAllConsumers();
+        return this.categoryService.getAllCategory();
     }
 
     @Post('createNewCategory')
-    createNewConsumer(@Body() newCategory:CategoryModel){
-        return this.categoryService.createNewConsumer(newCategory)
+    createNewCategory(@Body() newCategory:CategoryModel){
+        return this.categoryService.createNewCategory(newCategory)
     }
 
     @Post('deleteCategory/:id')
-    deleteConsumer(@Param('id') id:string){
-        return this.categoryService.deleteConsumer(id)
+    deleteCategory(@Param('id') id:string){
+        return this.categoryService.deleteCategory(id)
     }
 }
 

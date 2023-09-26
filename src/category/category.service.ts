@@ -7,16 +7,16 @@ import { Model } from "mongoose";
 export class CategoryService{
     constructor(@InjectModel(Category.name) private category:Model<CategoryDocument>){}
 
-    async getAllConsumers(){
+    async getAllCategory(){
         return await this.category.find()
     }
 
-    async createNewConsumer(categoryInformation){
+    async createNewCategory(categoryInformation){
         const newCategory=new this.category(categoryInformation)
         return await newCategory.save()
     }
 
-    async deleteConsumer(id){
+    async deleteCategory(id){
 
         return await this.category.findByIdAndDelete(id)
     }   
