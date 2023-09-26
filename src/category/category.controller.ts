@@ -21,3 +21,4 @@ export class CategoryController{
         return this.categoryService.deleteConsumer(id)
     }
 }
+
