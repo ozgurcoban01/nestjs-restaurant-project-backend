@@ -8,7 +8,11 @@ export class Order {
   @Prop()
   consumer_id: string;
   @Prop()
+  consumer_name: string;
+  @Prop()
   table_id: string;
+  @Prop()
+  table_name: string;
   @Prop()
   menu: MenuItemModel[];
   @Prop()

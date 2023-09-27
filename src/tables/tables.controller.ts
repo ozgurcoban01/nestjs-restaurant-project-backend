@@ -25,4 +25,5 @@ export class TableController{
     deleteTable(@Param('id') id:string){
         return this.tableService.deleteTable(id)
     }
+
 }
